@@ -1,0 +1,12 @@
+source 'http://rubygems.org'
+gem 'sinatra', '1.4.2'
+gem 'async_sinatra'
+gem 'data_mapper', '1.2.0'
+gem 'dm-sqlite-adapter'
+gem 'dm-serializer'
+gem 'thin', '1.5.1'
+gem 'slim', '1.3.8'
+gem 'sass', '3.2.6'
+gem 'zurb-foundation'
+gem 'foundation-sass'
+
