@@ -23,6 +23,7 @@ DataMapper.auto_upgrade!
 configure do
   Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config', 'compass.config'))
   set :template_engine, :slim
+  set :format => :html5
 end
 
 class Backbone < Sinatra::Base
