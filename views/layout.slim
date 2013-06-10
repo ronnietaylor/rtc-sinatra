@@ -8,6 +8,8 @@ html
     title Ronnie Taylor
     link(rel="stylesheet" type="text/css" href="/stylesheets/_normalize.css")
     link(rel="stylesheet" type="text/css" media="screen, projector, print" href="/stylesheets/app.css")
+    link(rel="stylesheet" type="text/css" media="screen, projector, print" href="/stylesheets/fonts.css")
+    link(rel="stylesheet" type="text/css" media="screen, projector, print" href="/stylesheets/custom.css")
     /! Le HTML5 shim, for IE6-8 support of HTML5 elements.
     /[if lt IE 9]
       script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
@@ -18,50 +20,14 @@ html
           .nav-bar.right
             ul.button-group
               li
-                a.button(href="#") Link 1
+                a.button(href="#") Work
               li
-                a.button(href="#") Link 2
+                a.button(href="#") About
               li
-                a.button(href="#") Link 3
+                a.button(href="#") Words
               li
-                a.button(href="#") Link 4
-      = yield
-      .row
-        .large-9.columns(role="content")
-          article
-            h3
-              a(href="#") Blog Post Title
-            h6
-              | Written by
-              a(href="#") Ronnie Taylor
-              | on June 8, 2013
-            .row
-              .large-6.columns
-                p Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.
-                p Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.
-              .large-6.columns
-                img(src="http://placehold.it/400x240&text=[img]")
-
-            p Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.
-            p Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.
-          hr
-          article
-            h3
-              a(href="#") Blog Post Title
-            h6
-              | Written by
-              a(href="#") Ronnie Taylor
-              | on June 8, 2013
-            .row
-              .large-6.columns
-                p Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.
-                p Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.
-              .large-6.columns
-                img(src="http://placehold.it/400x240&text=[img]")
-
-            p Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.
-            p Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.
-
+                a.button(href="#") Get in touch
+      == yield
       footer.row
         .large-12.columns
           hr
