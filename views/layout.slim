@@ -6,10 +6,9 @@ html
     meta(name="description" content="Content I like")
     meta(name="author" content="Ronnie Taylor")
     title Ronnie Taylor
+    link(rel="stylesheet" type="text/css" media="screen, projector, print" href="/stylesheets/fonts.css")
     link(rel="stylesheet" type="text/css" href="/stylesheets/_normalize.css")
     link(rel="stylesheet" type="text/css" media="screen, projector, print" href="/stylesheets/app.css")
-    link(rel="stylesheet" type="text/css" media="screen, projector, print" href="/stylesheets/fonts.css")
-    link(rel="stylesheet" type="text/css" media="screen, projector, print" href="/stylesheets/custom.css")
     == css :application
     == js :app
     /! Le HTML5 shim, for IE6-8 support of HTML5 elements.
@@ -21,9 +20,9 @@ html
       == yield
       == partial :"partials/_footer", :template_engine => :slim
     script(type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
-    script(type="text/javascript" src="/javascripts/underscore.js")
-    script(type="text/javascript" src="/javascripts/backbone.js")
-    script(type="text/javascript" src="/javascripts/vendor/custom.modernizr.js")
-    script(type="text/javascript" src="/javascripts/foundation/foundation.js")
-    script(type="text/javascript" src="/javascripts/app.js")
+    script(type="text/javascript" src="/js/underscore.js")
+    script(type="text/javascript" src="/js/backbone.js")
+    script(type="text/javascript" src="/js/vendor/custom.modernizr.js")
+    script(type="text/javascript" src="/js/foundation/foundation.js")
+    script(type="text/javascript" src="/js/app.js")
 

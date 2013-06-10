@@ -113,8 +113,8 @@ $global-radius: 3px;
 // Grid Variables
 //
 
-// $row-width: emCalc(1000px);
-// $column-gutter: emCalc(30px);
+$row-width: emCalc(1000px);
+$column-gutter: emCalc(30px);
 // $total-columns: 12;
 
 //
@@ -138,7 +138,7 @@ $global-radius: 3px;
 
 $header-font-family: 'GibsonLightBold', Helvetica, Arial, sans-serif;
 $header-font-weight: normal;
-// $header-font-style: normal;
+$header-font-style: normal;
 $header-font-color: #F05A24;
 // $header-line-height: 1.4;
 // $header-top-margin: .2em;
@@ -1267,3 +1267,32 @@ $header-font-color: #F05A24;
 // Sticky Class
 
 // $topbar-sticky-class:                  ".sticky";
+
+$fontFileName: "/fonts/general_foundicons";
+$fontName: "GeneralFoundicons";
+$classPrefix: "foundicon-";
+
+@mixin i-class($name,$pua) {
+  .#{$classPrefix}#{$name}:before { 
+    content: "\f#{$pua}";
+  }
+}
+
+@mixin ie-class($name,$pua) {
+  .#{$classPrefix}#{$name} { 
+    *zoom: expression( this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf#{$pua};"); 
+  }
+}
+
+@mixin face {
+  @font-face { 
+    font-family: $fontName;
+    src: url('#{$fontFileName}.eot');
+    src: url('#{$fontFileName}.eot?#iefix') format('embedded-opentype'),
+         url('#{$fontFileName}.woff') format('woff'),
+         url('#{$fontFileName}.ttf') format('truetype'),
+         url('#{$fontFileName}.svg##{$fontName}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
