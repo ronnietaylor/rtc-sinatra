@@ -17,8 +17,6 @@ class Backbone < Sinatra::Base
     enable :logging
   end
 
-  register Sinatra::Async
-
   get '/' do
    slim :index
   end
