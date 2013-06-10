@@ -5,12 +5,6 @@ require 'sass'
 require 'compass'
 require 'zurb-foundation'
 
-unless ENV['RACK_ENV'].nil? || ENV['RACK_ENV'] == ''
-  DataMapper.setup( :default, "sqlite://#{Sinatra::Application.root}/db/#{ENV['RACK_ENV']}.db" )
-end
-
-DataMapper.auto_upgrade!
-
 configure do
   Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config', 'compass.config'))
   set :template_engine, :slim
