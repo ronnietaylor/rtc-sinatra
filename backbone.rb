@@ -4,7 +4,6 @@ require 'slim'
 require 'sass'
 require 'compass'
 require 'zurb-foundation'
-require './models/posts'
 
 unless ENV['RACK_ENV'].nil? || ENV['RACK_ENV'] == ''
   DataMapper.setup( :default, "sqlite://#{Sinatra::Application.root}/db/#{ENV['RACK_ENV']}.db" )
