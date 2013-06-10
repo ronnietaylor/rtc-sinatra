@@ -37,7 +37,7 @@ class Backbone < Sinatra::Base
     ]
 
     css :application, '/css/application.css', [
-      '/css/screen.css'
+      '/css/fonts.css'
     ]
 
     js_compression  :jsmin    # :jsmin | :yui | :closure | :uglify

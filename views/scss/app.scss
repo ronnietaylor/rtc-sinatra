@@ -75,13 +75,16 @@ body{
 			}
 		}
 		.portfolio-items {
-			.row {
-				margin-bottom: 20px;
-				.p-item {
+			margin-bottom: 20px;
+			.p-item {
+				.panel {
 					@include radius($global-radius);
+					text-align: center;
 					border: 1px solid #d7ccc9;
 					background-color: #e7e1df;
-					padding: 15px;
+					i {
+						font-size: 6em;
+					}
 				}
 			}
 		}
