@@ -1,13 +1,5 @@
 # Get ready to kick ass.
 require 'sinatra'
-require 'sinatra/async'
-require 'data_mapper'
-require 'dm-sqlite-adapter'
-require 'dm-core'
-require 'dm-constraints'
-require 'dm-migrations'
-require 'dm-timestamps'
-require 'dm-serializer'
 require 'slim'
 require 'sass'
 require 'compass'
