@@ -6,19 +6,19 @@ html
     meta(name="description" content="Content I like")
     meta(name="author" content="Ronnie Taylor")
     title Ronnie Taylor
-    link(rel="stylesheet" type="text/css" media="screen, projector, print" href="/stylesheets/fonts.css")
-    link(rel="stylesheet" type="text/css" href="/stylesheets/_normalize.css")
-    link(rel="stylesheet" type="text/css" media="screen, projector, print" href="/stylesheets/app.css")
+    /link(rel="stylesheet" type="text/css" media="screen, projector, print" href="/stylesheets/fonts.css")
     == css :application
-    == js :app
+    /link(rel="stylesheet" type="text/css" href="/stylesheets/_normalize.css")
+    /link(rel="stylesheet" type="text/css" media="screen, projector, print" href="/stylesheets/app.css")
     /! Le HTML5 shim, for IE6-8 support of HTML5 elements.
     /[if lt IE 9]
       script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
   body
     #inner-wrapper
-      == partial :"partials/_header", :template_engine => :slim
+      == partial :"partials/header"
       == yield
-      == partial :"partials/_footer", :template_engine => :slim
+      == partial :"partials/footer"
+    == js :app
     script(type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
     script(type="text/javascript" src="/js/jquery.fittext.js")
     script(type="text/javascript" src="/js/underscore.js")

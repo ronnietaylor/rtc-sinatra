@@ -7,22 +7,22 @@ require 'sass'
 require 'compass'
 require 'zurb-foundation'
 
-configure do
-  Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config', 'compass.config'))
-  set :template_engine, :slim
-  set :partial_template_engine, :slim
-  enable :partial_underscores
-  set :format => :html5
-  set :root, File.dirname(__FILE__)
-end
-
-configure :production, :development do
-  enable :logging
-end
-
 class Backbone < Sinatra::Base
   register Sinatra::AssetPack
   register Sinatra::Partial
+
+  configure do
+    Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config', 'compass.config'))
+    set :template_engine, :slim
+    set :partial_template_engine, :slim
+    enable :partial_underscores
+    set :format => :html5
+    set :root, File.dirname(__FILE__)
+  end
+
+  configure :production, :development do
+    enable :logging, :sessions
+  end
 
   assets {
     serve '/js',      from: 'assets/js'
@@ -37,7 +37,9 @@ class Backbone < Sinatra::Base
     ]
 
     css :application, '/css/application.css', [
-      '/css/fonts.css'
+      '/css/fonts.css',
+      '/css/_normalize.css',
+      '/css/app.css'
     ]
 
     js_compression  :jsmin    # :jsmin | :yui | :closure | :uglify
@@ -52,7 +54,7 @@ class Backbone < Sinatra::Base
    slim :blog
   end
 
-  get '/stylesheets/:name.css' do
+  get '/css/:name.css' do
     content_type 'text/css', :charset => 'utf-8'
     scss(:"scss/#{params[:name]}", Compass.sass_engine_options)
   end
