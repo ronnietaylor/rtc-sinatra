@@ -10,6 +10,7 @@ require 'zurb-foundation'
 class Backbone < Sinatra::Base
   register Sinatra::AssetPack
   register Sinatra::Partial
+  use Rack::Deflater
 
   configure do
     Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config', 'compass.config'))
