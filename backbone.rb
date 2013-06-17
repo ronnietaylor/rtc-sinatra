@@ -32,6 +32,13 @@ class Backbone < Sinatra::Base
     # The second parameter defines where the compressed version will be served.
     # (Note: that parameter is optional, AssetPack will figure it out.)
     js :app, '/js/app.js', [
+      '/js/jquery-1.7.2.min.js',
+      '/js/jquery.fittext.js',
+      '/js/underscore.js',
+      '/js/backbone.js',
+      '/js/custom.modernizr.js',
+      '/js/foundation/foundation.js',
+      '/js/thisapp.js',
       '/js/vendor/**/*.js',
       '/js/lib/**/*.js'
     ]
